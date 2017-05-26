@@ -48,3 +48,18 @@ function forecast_cache ( $lat, $long, $token ){
 }
 
 forecast_cache ( '37.8267', '-122.423', $api );
+
+function parse_cache(){
+  // Get json string
+  $string = file_get_contents("forecast.json");
+
+  // Convert to array
+  $array = json_decode($string, true);
+
+  echo "<pre>";
+  print_r( $json_a['currently'] );
+  echo "</pre>";
+
+}
+
+parse_cache();
