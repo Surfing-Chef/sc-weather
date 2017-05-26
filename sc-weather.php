@@ -7,3 +7,6 @@ Author: Surfing-Chef
 License: GPLv2 or later
 Text Domain: sc-weather
 */
+
+// WorPress check to deny direct access to the file
+//defined( 'ABSPATH' ) or die( "I don't like the way you're looking at me!" );
