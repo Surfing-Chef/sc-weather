@@ -14,5 +14,8 @@ Text Domain: sc-weather
 // API
 require_once 'api.php';
 
-// Composer Packages
+// Composer dependencies
 require_once 'vendor/autoload.php';
+
+// Import Forecast namespace
+use Forecast\Forecast;
