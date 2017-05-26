@@ -10,3 +10,6 @@ Text Domain: sc-weather
 
 // WorPress check to deny direct access to the file
 //defined( 'ABSPATH' ) or die( "I don't like the way you're looking at me!" );
+
+// API
+require_once 'api.php';
