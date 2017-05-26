@@ -13,3 +13,6 @@ Text Domain: sc-weather
 
 // API
 require_once 'api.php';
+
+// Composer Packages
+require_once 'vendor/autoload.php';
