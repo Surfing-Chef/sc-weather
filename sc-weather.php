@@ -9,7 +9,7 @@ Text Domain: sc-weather
 */
 
 // WordPress check to deny direct access to the file
-//defined( 'ABSPATH' ) or die( "I don't like the way you're looking at me!" );
+//defined( 'ABSPATH' ) or die( "Error: contact admin@surfing-chef.com" );
 
 // API
 require_once 'api.php';
