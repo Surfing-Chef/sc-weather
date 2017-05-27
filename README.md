@@ -1,4 +1,5 @@
-# TO DO  
+# SC-Weather - A Darksky.net Weather Feed  
+> version 1.0  
 
 ### Setup Git and Basic Folder Structure:  
 dark/
