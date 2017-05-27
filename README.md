@@ -43,25 +43,116 @@ dark/
    sc-weather.php  
 
 ### More on Parsing Darksky data
-The *array* returned from the *json* file is multidimentional with the following key names:
-```code 
+The *array* returned from the *json* file is multidimentional with the following keys:
+```code
 array (size=8)
-'latitude' => float  
-'longitude' => float  
-'timezone' => string  
-'offset' => int  
-'currently' => array  
-'hourly' => array  
-'daily' => array  
-'headers' => array  
+  'latitude' => float  
+  'longitude' => float  
+  'timezone' => string  
+  'offset' => int  
+  'currently' => array  
+  'hourly' => array  
+  'daily' => array  
+  'headers' => array  
 ```
-Drilling down into currently, hourly and daily we see the following keynames:  
+Drilling down into currently, hourly and daily we see the following keys.
+- 'currently':    
+```code
+array (size=17)
+  'time' => int
+  'summary' => string
+  'icon' => string
+  'nearestStormDistance' => int
+  'nearestStormBearing' => int
+  'precipIntensity' => int
+  'precipProbability' => int
+  'temperature' => float
+  'apparentTemperature' => float
+  'dewPoint' => float
+  'humidity' => float
+  'windSpeed' => float
+  'windBearing' => int
+  'visibility' => float
+  'cloudCover' => float
+  'pressure' => float
+  'ozone' => float
+```  
 
+- 'hourly':  
+```code
+array (size=3)
+  'summary' => string
+  'icon' => string
+  'data' =>
+    array (size=49)
+      0 =>
+        array (size=15)
+          'time' => int
+          'summary' => string
+          'icon' => string
+          'precipIntensity' => int
+          'precipProbability' => int
+          'temperature' => float
+          'apparentTemperature' => float
+          'dewPoint' => float
+          'humidity' => float
+          'windSpeed' => float
+          'windBearing' => int
+          'visibility' => float
+          'cloudCover' => float
+          'pressure' => float
+          'ozone' => float
+      1 =>
+      ...
+      49 =>
+      ...
+```  
 
+- 'daily':  
+```code
+array (size=3)
+  'summary' => string
+  'icon' => string
+  'data' =>
+    array (size=8)
+      0 =>
+        array (size=27)
+          'time' => int
+          'summary' => string
+          'icon' => string
+          'sunriseTime' => int
+          'sunsetTime' => int
+          'moonPhase' => float
+          'precipIntensity' => float
+          'precipIntensityMax' => float
+          'precipIntensityMaxTime' => int
+          'precipProbability' => float
+          'precipType' => string
+          'temperatureMin' => float
+          'temperatureMinTime' => int
+          'temperatureMax' => float
+          'temperatureMaxTime' => int
+          'apparentTemperatureMin' => float
+          'apparentTemperatureMinTime' => int
+          'apparentTemperatureMax' => float
+          'apparentTemperatureMaxTime' => int
+          'dewPoint' => float
+          'humidity' => float
+          'windSpeed' => float
+          'windBearing' => int
+          'visibility' => float
+          'cloudCover' => float
+          'pressure' => float
+          'ozone' => float
+        1 =>
+        ...
+        7 =>
+        ...
+```  
 
-### convert to a Plugin
+### Convert to a Plugin
 
-### shortcode will take lat and long for forecast area(s)
+#### shortcode short take latitude and longitude for forecast area(s)
 
 ## LINKS USED:
 (Making a WordPress Plugin...)[https://www.smashingmagazine.com/2016/03/making-a-wordpress-plugin-that-uses-service-apis/]  
