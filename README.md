@@ -42,6 +42,23 @@ dark/
    README.md  
    sc-weather.php  
 
+###More on Parsing Darksky data
+The *array* returned from the *json* file is multidimentional with the following key names:
+```code 
+array (size=8)
+'latitude' => float  
+'longitude' => float  
+'timezone' => string  
+'offset' => int  
+'currently' => array  
+'hourly' => array  
+'daily' => array  
+'headers' => array  
+```
+Drilling down into currently, hourly and daily we see the following keynames:  
+
+
+
 ###convert to a Plugin
 
 ###shortcode will take lat and long for forecast area(s)
