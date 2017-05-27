@@ -1,16 +1,16 @@
-#TO DO  
+# TO DO  
 
-###Setup Git and Basic Folder Structure:  
+### Setup Git and Basic Folder Structure:  
 dark/
    git/  
    .gitignore  
    sc-weather.php  
    README.md   
 
-###Use Composer to Install Darksky API Wrapper Package  
+### Use Composer to Install Darksky API Wrapper Package  
 A link to download and install instructions can be found [here](https://getcomposer.org/).  Ensure all command prompts/consoles are restarted after installing before using composer.  Copy the *require script* from the top of the page for the "Drop dead simple Dark Sky API wrapper" by Guilherme Uhelski from (here)[https://packagist.org/packages/guhelski/forecast-php]. Navigate the console to the root of the project directory and paste the *require script* at the command prompt to install the package.
 
-####folder stucture  
+#### folder stucture  
 dark/
    git/  
    vendor/  
@@ -20,7 +20,7 @@ dark/
    README.md  
    sc-weather.php  
 
-###Create Plugin Logic
+### Create Plugin Logic
 Implement a security catch for php files
 Get the API token from secure location (**adjust for deployment**).  Next, load the Composer based dependencies and import the Darksky wrapper namespace.  
 
@@ -30,7 +30,7 @@ The new json cache file contains all data to parse and display.  By using CRON o
 
 A parse function will read the json contents to astring, convert them to an array and display the data as formatted html tags and content.
 
-####folder stucture  
+#### folder stucture  
 dark/
    git/  
    vendor/  
@@ -42,7 +42,7 @@ dark/
    README.md  
    sc-weather.php  
 
-###More on Parsing Darksky data
+### More on Parsing Darksky data
 The *array* returned from the *json* file is multidimentional with the following key names:
 ```code 
 array (size=8)
@@ -59,11 +59,11 @@ Drilling down into currently, hourly and daily we see the following keynames:
 
 
 
-###convert to a Plugin
+### convert to a Plugin
 
-###shortcode will take lat and long for forecast area(s)
+### shortcode will take lat and long for forecast area(s)
 
-##LINKS USED:
+## LINKS USED:
 (Making a WordPress Plugin...)[https://www.smashingmagazine.com/2016/03/making-a-wordpress-plugin-that-uses-service-apis/]  
 (Namespaces)[https://www.sitepoint.com/php-53-namespaces-basics/]  
 (PHP OOP)[http://www.killerphp.com/tutorials/object-oriented-php/]  
