@@ -70,3 +70,17 @@ function parse_cache($timeFrame=''){
   return $array;
 }
 
+// Output cache data
+function output_cache($timeFrame, $key){
+
+  if($timeFrame == "currently"){
+    $timeFrame = parse_cache( 'currently' );
+  } else if ($timeFrame == "hourly"){
+    $timeFrame = parse_cache( 'hourly' );
+  } else if ($timeFrame == "daily"){
+    $timeFrame = parse_cache( 'daily' );
+  }
+
+  return $timeFrame[$key];
+}
+
