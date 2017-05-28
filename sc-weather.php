@@ -49,6 +49,12 @@ function forecast_cache ( $lat, $long, $token ){
 
 forecast_cache ( '50.296256', '-117.685750', $api );
 
+// Pre-parse forecast cache file.
+function parse_cache($timeFrame=''){
+  /*
+    * $timeFrame has three possible values:
+    * currently, hourly, daily
+  */
 
 function parse_cache(){
   // Get json string
