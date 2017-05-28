@@ -47,7 +47,8 @@ function forecast_cache ( $lat, $long, $token ){
   fclose( $fp );
 }
 
-forecast_cache ( '37.8267', '-122.423', $api );
+forecast_cache ( '50.296256', '-117.685750', $api );
+
 
 function parse_cache(){
   // Get json string
