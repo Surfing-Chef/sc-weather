@@ -7,88 +7,67 @@ require_once 'sc-weather-functions.php';
 
 ?>
 <style>
-  figure.icon-current,
-  figure.icon-daily,
-  figure.icon-daily img {
-    border: none !important;
-  }
 
-  .container-forecast {
-  min-width: 900px;
-  height: 250px;
-  margin: 0 auto;
-  }
-
-  .container-currently {
-    width: 25%;
-    height: 250px;
-    float: left;
-  }
-
-    .container-icon-temp {
+    /*.container-icon-temp {
       display: flex !important;
       flex-direction: row;
       width: 100%;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
-    }
+    }*/
 
-    .container-icon-temp:after {
-      border: none !important;
-    }
+    /*.container-icon-temp:after {
+      border: none !important
+    }*/
 
       .icon-current {
-        height: 75px;
-        width: 75px;
+        /*height: 75px;
+        width: 75px;*/
         background-image: url("<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>");
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-right: 1em;
       }
 
-      .temp-current {
+      /*.temp-current {
         padding-top: 10px;
         font-size: 3em;
-      }
+      }*/
 
-    .container-summary-wind {
+    /*.container-summary-wind {
       display: block;
       width: 100%;
       text-align: center;
-    }
+    }*/
 
-      .summary-current {
+      /*.summary-current {
         font-weight: bold;
-      }
+      }*/
 
-  .container-daily {
+  /*.container-daily {
     display: flex;
     flex-direction: row;
     justify-content: center
     height: 250px;
     width: 60%;
     float: right;
-  }
+  }*/
 
-    .daily-day {
+    /*.daily-day {
       display: flex;
       flex-direction: column;
       width: 4em;
       flex: 1 1;
-    }
+    }*/
 
-      h4 {
+      /*h4 {
         margin-bottom: 0;
-      }
-      .icon-daily {
+      }*/
+      /*.icon-daily {
         flex-grow: 0;
         margin: 0;
-      }
+      }*/
 
-        .icon-daily img {
+        /*.icon-daily img {
           height: 2em;
-        }
+        }*/
 
 
 </style>
