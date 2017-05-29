@@ -1,83 +1,30 @@
 <?php
 /*
 Plugin Name: SC-Weather
-Description: Implement darksky.net feed into WordPress
-Version: 1.0
+Plugin URI: https://github.com/Surfing-Chef/Dark
+Description: Uses a wrapper to display a weather
+feed from Darksky.net
+Version: 1.1
 Author: Surfing-Chef
-License: GPLv2 or later
+Author URI: https://github.com/Surfing-Chef
+License: GPL2
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: sc-weather
+Domain Path:
+
+SC-Weather is free software: you can redistribute it
+and/or modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation,
+either version 2 of the License, or any later version.
+
+SC-Weather is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
 */
 
-// WordPress check to deny direct access to the file
-//defined( 'ABSPATH' ) or die( "Error: contact admin@surfing-chef.com" );
-
 // Functions
-require_once 'sc-weather-functions.php';
-
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Weather Parse</title>
-</head>
-<body>
-  <section id="sc-forecast" class="container-forecast">
-
-    <div class="container-currently">
-      <figure class="icon-current">
-        <img src="img/<?php echo output_cache('currently', 'icon'); ?>" alt="Current weather is <?php echo output_cache('currently', 'summary'); ?>">
-      </figure>
-
-      <div class="temp-current">
-        <?php echo round(output_cache('currently', 'temperature')); ?>&deg;
-      </div>
-
-      <div class="summary-current">
-        <?php echo output_cache('currently', 'summary'); ?>
-      </div>
-
-      <div class="summary-wind">
-        Wind: <?php echo round(output_cache('currently', 'windSpeed')); ?> m/s (<?php echo getDirection(round(output_cache('currently', 'windBearing')));?>)
-      </div>
-
-    </div>
-
-    <div class="container-daily">
-      <?php
-        $timezone = parse_cache()['timezone'];
-        foreach (output_cache('daily', 'data') as $key => $value) {
-
-          // day
-          if($key == 0){
-            $time = "Today";
-          } else {
-            $time = $value['time'];
-            $time = date('D', $time);
-          }
-          echo $time . " => ";
-
-          // icon
-          $icon = $value['icon'];
-          echo $icon . " => ";
-
-          // high
-          $tempMax = round($value['temperatureMax']);
-          echo $tempMax . " => ";
-
-          // low
-          $tempMin = round($value['temperatureMin']);
-          echo $tempMin . "<br/>";
-
-          // chart temperature
-
-        }
-      ?>
-    </div>
-
-  </section>
-</body>
-</html>
-<?php
+function display_weather (){
+  require_once 'sc-weather-page.php';
+};
+add_shortcode( 'sc_weather', 'display_weather' );
