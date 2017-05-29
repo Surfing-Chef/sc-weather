@@ -1,5 +1,5 @@
 # SC-Weather - A Darksky.net Weather Feed  
-> version 1.0  
+> ### version 1.0  
 
 ### Setup Git and Basic Folder Structure:  
 dark/
@@ -151,9 +151,13 @@ array (size=3)
         ...
 ```  
 
-### Convert to a Plugin
+Using the above array(s) we layout a basic HTML structure for the data.  The default CSS for the plugin will reside in the root folder of the plugin.  The website's stylesheet(s) will further refine these styles where appropriate.  A shortcode makes the plugin available in posts or pages.
 
-#### shortcode short take latitude and longitude for forecast area(s)
+#### shortcode short take latitude and longitude for forecast area(s)  
+
+### Create Plugin Settings Options Dashboard
+- styles  
+- options  
 
 ## LINKS USED:
 (Making a WordPress Plugin...)[https://www.smashingmagazine.com/2016/03/making-a-wordpress-plugin-that-uses-service-apis/]  
