@@ -22,18 +22,24 @@ require_once 'sc-weather-functions.php';
   .container-currently {
     width: 25%;
     height: 250px;
-    padding-right: 2em;
     float: left;
   }
 
     .container-icon-temp {
-      display: flex;
+      display: flex !important;
+      flex-direction: row;
       width: 100%;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .container-icon-temp:after {
+      border: none !important;
     }
 
       .icon-current {
-        min-height: 75px;
-        min-width: 75px;
+        height: 75px;
+        width: 75px;
         background-image: url("<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>");
         background-position: center center;
         background-size: cover;
