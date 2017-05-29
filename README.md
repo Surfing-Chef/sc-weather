@@ -1,5 +1,6 @@
 # SC-Weather - A Darksky.net Weather Feed  
-> ### version 1.0  
+> ### version 1.1  
+> > Moved to WordPress development environment
 
 ### Setup Git and Basic Folder Structure:  
 dark/
@@ -163,4 +164,8 @@ Using the above array(s) we layout a basic HTML structure for the data.  The def
 (Making a WordPress Plugin...)[https://www.smashingmagazine.com/2016/03/making-a-wordpress-plugin-that-uses-service-apis/]  
 (Namespaces)[https://www.sitepoint.com/php-53-namespaces-basics/]  
 (PHP OOP)[http://www.killerphp.com/tutorials/object-oriented-php/]  
-(Darksky.net)[https://darksky.net/dev/]   
+(Darksky.net)[https://darksky.net/dev/]  
+(Wordpress Plugin Handbook)[https://developer.wordpress.org/plugins/]  
+(WordPress Plugin API)[https://codex.wordpress.org/Plugin_API]  
+(WordPress Plugin API/Filter Reference)[https://codex.wordpress.org/Plugin_API/Filter_Reference]  
+(WordPress Plugin API/Action Reference)[https://codex.wordpress.org/Plugin_API/Action_Reference]  
