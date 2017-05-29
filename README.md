@@ -32,7 +32,7 @@ The new json cache file contains all data to parse and display.  By using CRON o
 
 A parse function will read the json contents to astring, convert them to an array and display the data as formatted html tags and content.
 
-#### folder stucture  
+#### folder structure  
 dark/
    git/  
    vendor/  
@@ -152,7 +152,9 @@ array (size=3)
         ...
 ```  
 
-Using the above array(s) we layout a basic HTML structure for the data.  The default CSS for the plugin will reside in the root folder of the plugin.  The website's stylesheet(s) will further refine these styles where appropriate.  A shortcode makes the plugin available in posts or pages.
+Using the above array(s) we layout a basic HTML structure for the data.  The default CSS for the plugin will reside in the root folder of the plugin.  The website's stylesheet(s) will further refine these styles where appropriate.  A shortcode makes the plugin available in posts or pages.  
+
+Place this shortcode into a post of page to use: `[sc_weather]`  
 
 #### shortcode short take latitude and longitude for forecast area(s)  
 
