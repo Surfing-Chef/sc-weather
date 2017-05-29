@@ -1,37 +1,15 @@
 <?php
-/*
-Description: Functions pertinent to SC-Weather
-Version: 1.0
-Author: Surfing-Chef
-License: GPLv2 or later
-Text Domain: sc-weather
-Contents:
-  // Create a forecast cache file.
-  * $lat and $long are latitude and longitude respectively,
-  * token is the Darksky API token
-  forecast_cache ( $lat, $long, $token );
-
-  // Pre-parse forecast cache file
-  * $timeFrame has three possible values:
-  * currently, hourly, daily
-  *
-  parse_cache($timeFrame='');
-
-  // Output cache data
-  * $timeFrame has three possible values:
-  * currently, hourly, daily
-  * $key is dependnet on the sub array of data
-  @ link https://github.com/Surfing-Chef/Dark
-  function output_cache($timeFrame, $key);
-*/
-
 // WordPress check to deny direct access to the file
 //defined( 'ABSPATH' ) or die( "Error: contact admin@surfing-chef.com" );
+
+define( 'SCWEATHER_PLUGIN_URL', plugins_url()."/sc-weather/" );
+
+define( 'SCWEATHER_IMG_URL', plugins_url()."/sc-weather/img/" );
 
 // Pre-parse forecast cache file.
 function parse_cache($timeFrame=''){
   // Get json string
-  $string = file_get_contents("forecast.json");
+  $string = file_get_contents(SCWEATHER_PLUGIN_URL."forecast.json");
 
   // Convert to array
   $array = json_decode($string, true);
