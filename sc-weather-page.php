@@ -76,13 +76,13 @@ require_once 'sc-weather-functions.php';
         $tempMax = round($value['temperatureMax']);
         $tempMin = round($value['temperatureMin']);
 
-        echo $tempMax;
+        echo "<span class=\"max temp-daily\">$tempMax&deg;</span>";
 
         // chart temperature
         $temp_height = 5*($tempMax-$tempMin);
-        echo '<div class"" style="width: 10px; height: '.$temp_height.'px; background-color: black;"></div>';
+        echo '<div class"temp-graph" style="width: 10px; height: '.$temp_height.'px; background-color: black;"></div>';
 
-        echo $tempMin;
+        echo "<span class=\"min temp-daily\">$tempMin&deg;</span>";
 
 
 
