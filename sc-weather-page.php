@@ -40,6 +40,7 @@ require_once 'api.php'; //$api
     </article>
 
   </div>
+  <!-- END container-currently -->
 
   <div class="container-daily">
     <?php
@@ -81,22 +82,25 @@ require_once 'api.php'; //$api
         // temperatures
         $tempMax = round($value['temperatureMax']);
         $tempMin = round($value['temperatureMin']);
+        $topOffset = 50 + ($max - $tempMax)*3;
+        $temp_height = 4*($tempMax-$tempMin);
 
-        echo "<span class=\"max temp-daily\">$tempMax&deg;</span>";
+          echo "<div class=\"temp-daily-container\" style=\"top: ".$topOffset."px;\">";
 
-        // chart temperature
-        $temp_height = 5*($tempMax-$tempMin);
-        echo '<div class"temp-graph" style="width: 10px; height: '.$temp_height.'px; background-color: black;"></div>';
+            echo "<span class=\"max temp-daily\">$tempMax&deg;</span>";
 
-        echo "<span class=\"min temp-daily\">$tempMin&deg;</span>";
+            // chart temperature
+            echo '<div class="temp-graph" style="width: 1em; height: '.$temp_height.'px; background-color: black;"></div>';
 
+            echo "<span class=\"min temp-daily\">$tempMin&deg;</span>";
 
+          echo '</div>';
 
         echo '</div>';
       }
     ?>
   </div>
-
+  <!-- END container-daily -->
 </section>
 
 <?php
