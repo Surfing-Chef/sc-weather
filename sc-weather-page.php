@@ -6,79 +6,13 @@
 require_once 'sc-weather-functions.php';
 
 ?>
-<style>
-
-    /*.container-icon-temp {
-      display: flex !important;
-      flex-direction: row;
-      width: 100%;
-      padding-bottom: 0 !important;
-      margin-bottom: 0 !important;
-    }*/
-
-    /*.container-icon-temp:after {
-      border: none !important
-    }*/
-
-      .icon-current {
-        /*height: 75px;
-        width: 75px;*/
-        background-image: url("<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>");
-      }
-
-      /*.temp-current {
-        padding-top: 10px;
-        font-size: 3em;
-      }*/
-
-    /*.container-summary-wind {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }*/
-
-      /*.summary-current {
-        font-weight: bold;
-      }*/
-
-  /*.container-daily {
-    display: flex;
-    flex-direction: row;
-    justify-content: center
-    height: 250px;
-    width: 60%;
-    float: right;
-  }*/
-
-    /*.daily-day {
-      display: flex;
-      flex-direction: column;
-      width: 4em;
-      flex: 1 1;
-    }*/
-
-      /*h4 {
-        margin-bottom: 0;
-      }*/
-      /*.icon-daily {
-        flex-grow: 0;
-        margin: 0;
-      }*/
-
-        /*.icon-daily img {
-          height: 2em;
-        }*/
-
-
-</style>
-
 <section id="sc-forecast" class="container-forecast">
 
   <div class="container-currently">
 
     <article class="container-icon-temp">
 
-      <figure class="icon-current">
+      <figure class="icon-current" style="background-image: url('<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>')">
       </figure>
 
       <div class="temp-current">
