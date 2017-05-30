@@ -4,9 +4,15 @@
 
 // Functions
 require_once 'sc-weather-functions.php';
+require_once 'api.php'; //$api
 
 ?>
 <section id="sc-forecast" class="container-forecast">
+
+  <header class="sc-weather-header">
+    <span>Weather</span>
+    <a href="https://darksky.net/forecast/50.2963,-117.6857/ca12/en" target="_blank">Powered by Dark Sky</a>
+  </header>
 
   <div class="container-currently">
 
