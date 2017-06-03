@@ -17,8 +17,9 @@ require_once 'api.php'; //$api
 
     <article class="container-icon-temp">
 
-      <figure class="icon-current" style="background-image: url('<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>')">
-      </figure>
+      <div class="icon-current">
+        <img src="<?php echo SCWEATHER_IMG_URL . output_cache('currently', 'icon'); ?>.png" alt="">
+      </div>
 
       <div class="temp-current">
         <?php echo round(output_cache('currently', 'temperature')); ?>&deg;
@@ -75,7 +76,7 @@ require_once 'api.php'; //$api
 
         // icon
         $icon = $value['icon'];
-        echo '<figure class="icon-daily"><img src="'.SCWEATHER_IMG_URL.$icon.'"></figure>';
+        echo '<div class="icon-daily"><img src="'.SCWEATHER_IMG_URL.$icon.'"></div>';
         //echo $icon;
 
         // temperatures
