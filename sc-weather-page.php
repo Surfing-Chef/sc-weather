@@ -89,7 +89,7 @@ require_once 'api.php'; //$api
             echo "<span class=\"max temp-daily\">$tempMax&deg;</span>";
 
             // chart temperature
-            echo '<div class="temp-graph" style="width: 1em; height: '.$temp_height.'px; background-color: black;"></div>';
+            echo '<div class="temp-graph" style="width: 1em; height: '.$temp_height.'px;"></div>';
 
             echo "<span class=\"min temp-daily\">$tempMin&deg;</span>";
 
