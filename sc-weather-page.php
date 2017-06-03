@@ -5,7 +5,6 @@
 // Functions
 require_once 'sc-weather-functions.php';
 require_once 'api.php'; //$api
-
 ?>
 <section id="sc-forecast" class="container-forecast">
 
@@ -102,5 +101,3 @@ require_once 'api.php'; //$api
   </div>
   <!-- END container-daily -->
 </section>
-
-<?php
